@@ -4,6 +4,8 @@ import React, {useState} from 'react'
 export default function Video({url,id,title,comments,createdAt,upvotes,downvotes,views}) {
   
     const [show,setShow] = useState(false) 
+    const [upvote,setUpvote] = useState(upvotes) 
+    const [downvote,setDownvote] = useState(downvotes)
 
     const com = comments.map((e) => {
         return <li key={e.id}><h3>{e.user}</h3> {e.comment}</li>
@@ -14,11 +16,11 @@ export default function Video({url,id,title,comments,createdAt,upvotes,downvotes
     }
 
     function handleUpvotes(){
-
+        setUpvote((upvote) => upvote+1)
     }
 
     function handleDownvotes(){
-        
+        setDownvote((downvote) => downvote+1)
     }
   
     return (
@@ -34,8 +36,8 @@ export default function Video({url,id,title,comments,createdAt,upvotes,downvotes
       <div>
         <h1>{title}</h1>
         <p>{views} views | Uploaded {createdAt}</p>
-        <button onClick={handleUpvotes}>{upvotes} like </button>
-        <button onClick={handleDownvotes}>{downvotes} dislike</button>
+        <button onClick={handleUpvotes}>{upvote} like </button>
+        <button onClick={handleDownvotes}>{downvote} dislike</button>
         <button onClick={handleDisplay}>{show ? "Show" : "Hide"} Comments</button> 
         <hr></hr>
       </div>
