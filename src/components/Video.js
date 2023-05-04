@@ -36,9 +36,9 @@ export default function Video({url,id,title,comments,createdAt,upvotes,downvotes
       <div>
         <h1>{title}</h1>
         <p>{views} views | Uploaded {createdAt}</p>
-        <button onClick={handleUpvotes}>{upvote} like </button>
-        <button onClick={handleDownvotes}>{downvote} dislike</button>
-        <button className='d-block' onClick={handleDisplay}>{show ? "Show" : "Hide"} Comments</button> 
+        <button className='d-inline m-2' onClick={handleUpvotes}>{upvote} like </button>
+        <button className='d-inline' onClick={handleDownvotes}>{downvote} dislike</button>
+        <button className='d-inline m-5' onClick={handleDisplay}>{show ? "Show" : "Hide"} Comments</button> 
         <hr></hr>
       </div>
        <div className= {show ? 'd-none' : 'd-inline'}>
