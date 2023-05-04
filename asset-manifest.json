@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-hooks-state-events-pairing/static/css/main.bfb02906.css",
+    "main.js": "/react-hooks-state-events-pairing/static/js/main.1d852aaa.js",
+    "index.html": "/react-hooks-state-events-pairing/index.html",
+    "main.bfb02906.css.map": "/react-hooks-state-events-pairing/static/css/main.bfb02906.css.map",
+    "main.1d852aaa.js.map": "/react-hooks-state-events-pairing/static/js/main.1d852aaa.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bfb02906.css",
+    "static/js/main.1d852aaa.js"
+  ]
+}
